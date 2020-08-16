@@ -1,0 +1,21 @@
+//Import Partials
+@import "_config", "_typography";
+
+//Button Styling
+
+.btn {
+  //Padding, Border, etc.
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  //Colors
+  background: $primary-yellow;
+  color: white;
+  //Typography
+  @include mont-semibold;
+  font-size: 0.8rem;
+  //Cursor
+  cursor: pointer;
+  &-rounded {
+    border-radius: 50%;
+  }
+}
