@@ -7,6 +7,7 @@
   //Padding, Border, etc.
   padding: 0.8rem 1rem;
   border-radius: 6px;
+  border: 2px solid $primary-yellow;
   //Colors
   background: $primary-yellow;
   color: white;
@@ -16,6 +17,13 @@
   //Cursor
   cursor: pointer;
   &-rounded {
-    border-radius: 50%;
+    @extend .btn;
+    padding: 0.6rem 1.4rem;
+    border-radius: 9999px;
+  }
+  &.outlined {
+    background: transparent;
+    border: 2px solid $primary-yellow;
+    color: $primary-yellow;
   }
 }

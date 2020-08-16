@@ -1,3 +1,23 @@
-$primary-yellow: #e5c258;
+//Partials
+@import "_typography";
 
+//Colors
+$primary-yellow: #e5c258;
 $dark-grey: #626262;
+
+* {
+  display: border-box;
+  margin: 0;
+  padding: 0;
+  @include mont-regular;
+}
+
+html {
+  //Default font color
+  color: $dark-grey;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}

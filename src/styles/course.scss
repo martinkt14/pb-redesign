@@ -1,0 +1,173 @@
+@import "_config", "_typography";
+@import "btn";
+@import "nav";
+
+#hero {
+  //Display & Sizing
+  position: relative;
+  height: 60vh;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  //Typography
+  text-align: center;
+  #hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    //Background Image
+    background: url("./../img/golf_green_autumn.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+  #hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      #ffffff 13.5%,
+      rgba(196, 196, 196, 0) 80%
+    );
+    width: 100%;
+    height: 640px;
+    z-index: 1;
+  }
+  #hero-text {
+    //Colors
+    color: white;
+    //H1
+    h1 {
+      @include mont-bold;
+      font-size: 3rem;
+    }
+    h2 {
+      @include annie;
+      font-size: 2rem;
+    }
+    z-index: 2;
+    //CTA Buttons (Tee Times, Lessons)
+    #hero-cta {
+      margin: 0 auto;
+      margin-top: 6rem;
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      //Buttons
+      a.btn {
+        width: 40%;
+        &:first-of-type {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+
+#main-content {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 0;
+  h1 {
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-bottom: 1.2rem;
+  }
+  img {
+    //Positioning
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    //Sizing
+    height: 260px;
+    //Coloring
+    opacity: 0.6;
+  }
+}
+
+#course-container {
+  //Display
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  #course-selection {
+    button {
+      &:first-of-type {
+        margin-right: 1rem;
+      }
+    }
+  }
+  .course-description {
+    p {
+      text-align: center;
+      margin: 4rem auto;
+      font-size: 0.9rem;
+    }
+  }
+  #course-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    #course-image {
+      width: 60%;
+    }
+  }
+}
+
+#clubhouse-container {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+  #clubhouse-image {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    height: 100%;
+    width: 100%;
+    //Background Image
+    background: url("./../img/clubhouse.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    height: 100%;
+    width: 100%;
+  }
+  #clubhouse-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      90deg,
+      #ffffff 43.75%,
+      rgba(229, 229, 229, 0.6) 100%
+    );
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  #clubhouse-text {
+    //Positioning
+    position: relative;
+    top: 4rem;
+    z-index: 2;
+    //Sizing
+    // width: 50%;
+    h1 {
+      margin-bottom: 2rem;
+    }
+    p {
+      width: 60%;
+      font-size: 0.9rem;
+    }
+  }
+}
