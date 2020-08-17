@@ -1,0 +1,54 @@
+@import "_config", "_typography";
+
+footer {
+  padding: 3rem 0;
+  #footer-container {
+    //Display
+    display: flex;
+    justify-content: space-between;
+    //Colors
+    color: $primary-yellow;
+    #footer-contact-information {
+      font-size: 0.8rem;
+      img {
+        height: 48px;
+      }
+      > p {
+        &:first-of-type {
+          @include mont-bold;
+        }
+      }
+      #contact-address {
+        margin: 1.4rem 0;
+      }
+    }
+    #footer-menu {
+      display: flex;
+      font-size: 0.8rem;
+      .footer-menu-section {
+        margin-right: 2rem;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        .footer-menu-subsection {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1rem;
+          a {
+            color: inherit;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            &:first-of-type {
+              @include mont-semibold;
+            }
+          }
+        }
+      }
+    }
+    #footer-social-media {
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
