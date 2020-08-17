@@ -1,0 +1,195 @@
+@import "_config", "_typography";
+@import "btn";
+@import "nav";
+@import "footer";
+
+#hero {
+  //Display & Sizing
+  position: relative;
+  height: 60vh;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  //Typography
+  text-align: center;
+  #hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    //Background Image
+    background: url("./../img/golf_green_autumn.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+  #hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      #ffffff 13.5%,
+      rgba(196, 196, 196, 0) 80%
+    );
+    width: 100%;
+    height: 640px;
+    z-index: 1;
+  }
+  #hero-text {
+    //Colors
+    color: white;
+    //H1
+    h1 {
+      @include mont-bold;
+      font-size: 3rem;
+    }
+    h2 {
+      @include annie;
+      font-size: 2rem;
+    }
+    z-index: 2;
+    //CTA Buttons (Tee Times, Lessons)
+    #hero-cta {
+      margin: 0 auto;
+      margin-top: 6rem;
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      //Buttons
+      a.btn {
+        width: 40%;
+        &:first-of-type {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+
+#main-content {
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #membership-plans {
+    width: 70%;
+    h1 {
+      @include mont-bold;
+      color: $primary-yellow;
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+    .membership-tier {
+      padding: 1rem;
+      border-bottom: 1px solid $dark-grey;
+      .membership-tier-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        p {
+          @include mont-bold;
+          font-size: 1.4rem;
+        }
+      }
+      ul.membership-details {
+        li {
+          list-style: none;
+          font-size: 0.8rem;
+        }
+      }
+    }
+    #membership-benefits {
+      margin: 3rem 0;
+      ul {
+        list-style-position: inside;
+        li {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  #vip-membership-offer {
+    background: url("./../img/dimple_background.jpg");
+    padding: 2rem 3rem;
+    margin-top: 4rem;
+    width: 80%;
+    //Colors
+    color: $primary-yellow;
+    .flex-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      #vip-pricing {
+        margin-right: 4rem;
+        h1 {
+          @include mont-bold;
+        }
+        h2 {
+          @include mont-semibold;
+        }
+      }
+      #vip-benefits {
+        text-align: right;
+        ul {
+          list-style: none;
+        }
+      }
+    }
+
+    #vip-offer-disclaimer {
+      margin-top: 1rem;
+      font-size: 0.7rem;
+      color: #e5e5e5;
+    }
+  }
+
+  #junior-membership-plans {
+    margin-top: 4rem;
+    text-align: center;
+    h1 {
+      @include mont-bold;
+      color: $dark-grey;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+    #junior-membership-benefits {
+      margin-top: 2rem;
+      h2 {
+        color: $primary-yellow;
+        @include mont-bold;
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style: none;
+        li {
+          margin-bottom: 1rem;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    #junior-membership-pricing {
+      margin-top: 2rem;
+      list-style: none;
+      li {
+        @include mont-semibold;
+      }
+    }
+  }
+}
+
+#illustrated-course-container {
+  width: 100%;
+  height: 555px;
+  background: url("./../img/illustrated_course.png");
+  background-size: cover;
+  margin-top: -8rem;
+}
