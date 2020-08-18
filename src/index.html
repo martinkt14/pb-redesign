@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pebble Brook Golf Club - Westfield, IN</title>
 
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-VhBcF/php0Z/P5ZxlxaEx1GwqTQVIBu4G4giRWxTKOCjTxsPFETUDdVL5B6vYvOt"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" type="text/css" href="./styles/styles.scss" />
   </head>
   <body>
     <nav id="nav-container" class="container">
-      <a href="https://pb.martinteufel.com">
+      <a href="/index.html">
         <img src="./img/logo_color.png" />
       </a>
       <ul id="menu">
@@ -20,8 +27,8 @@
             >Tee Times</a
           >
         </li>
-        <li><a href="/course">Course</a></li>
-        <li><a href="/memberships">Memberships</a></li>
+        <li><a href="/course.html">Course</a></li>
+        <li><a href="/memberships.html">Memberships</a></li>
         <li><a href="/leagues">Leagues</a></li>
         <li><a href="/academy">Academy</a></li>
         <li><a href="/outings">Outings & Events</a></li>
@@ -38,7 +45,7 @@
           <a class="btn">Lessons</a>
         </div>
         <div id="golf-advisor-rating">
-          <img src="./img/golf_advisor_rating.png" />
+          <!-- <img src="./img/golf_advisor_rating.png" /> -->
         </div>
         <div id="scroll-arrows">
           <p>Scroll down for more</p>
@@ -66,11 +73,135 @@
         other course in the Indy area. The friendly atmosphere and quality golf
         courses make Pebble Brook Indiana’s Premier 36 Hole Public Facility.
       </p>
+      <div id="secondary-cta">
+        <a class="secondary-cta-item">
+          <i class="fas fa-golf-ball"></i>
+          <p>Book a Tee Time</p>
+        </a>
+        <a class="secondary-cta-item">
+          <i class="fas fa-envelope-open-text"></i>
+          <p>Join Email Club</p>
+        </a>
+        <a class="secondary-cta-item">
+          <i class="fas fa-golf-club"></i>
+          <p>Book a Lesson</p>
+        </a>
+      </div>
     </div>
     <div id="golfer-swinging-divider">
       <div id="golfer-image"></div>
       <div id="golfer-image-overlay"></div>
     </div>
+
+    <!-- GolfAdvisor.com badge start -->
+    <style>
+      div#golfadvisor_b1 * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        vertical-align: baseline;
+        margin-bottom: 10px;
+      }
+      div#golfadvisor_b1 {
+        width: 300px;
+        height: 100px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+      div#golfadvisor_b1 div {
+        position: relative;
+        width: 300px;
+        height: 100px;
+        background: #fafafa;
+        border: 1px solid #dcdcdc;
+      }
+      div#golfadvisor_b1 div p#gavd {
+        position: absolute;
+        top: 37px;
+        left: 15px;
+        width: 270px;
+        padding: 3px 0;
+        margin: 0;
+        font-family: Roboto;
+        font-weight: 300;
+        text-align: center;
+        font-size: 17px;
+        color: #848584;
+        line-height: 24px;
+        border-bottom: 1px solid #e3e3e3;
+        border-top: 1px solid #e3e3e3;
+      }
+      div#golfadvisor_b1 div p#gavr {
+        position: absolute;
+        top: 75px;
+        left: 55px;
+        padding: 0;
+        margin: 0;
+        font-family: Roboto;
+        text-align: center;
+        font-weight: 400;
+        font-size: 12px;
+        color: #62a7ae;
+        line-height: 16px;
+      }
+      div#golfadvisor_b1 div img#gavla {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+      }
+      div#golfadvisor_b1 div img#gavra {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://badge.golfadvisor.com/api/courses/badge/573"></script>
+    <div id="golfadvisor_b1">
+      <a
+        href="http://www.golfadvisor.com/courses/573/?utm_campaign=badge_1&utm_medium=website&utm_source=badges"
+        target="_blank"
+      >
+        <div>
+          <img
+            id="gavla"
+            src="https://gav_static.s3.amazonaws.com/badges/ga-badge-logo.png"
+          />
+          <script type="text/javascript">
+            try {
+              var d = window.golfadvisor_rb[573];
+              if (d["reviews"] > 0) {
+                document.write(
+                  '<img id="gavra" src="https://golfnow.ugc.bazaarvoice.com/0079ga/' +
+                    d["rating"] +
+                    '/5/rating.png"><p id="gavd">This course is rated ' +
+                    d["rating"] +
+                    ' out of 5 </p><p id="gavr">Read all ' +
+                    d["reviews"] +
+                    " Reviews / Write Review</p>"
+                );
+              } else {
+                document.write(
+                  '<img id="gavra" src="https://golfnow.ugc.bazaarvoice.com/0079ga/' +
+                    d["rating"] +
+                    '/5/rating.png"><p id="gavd">Be the first to review this course</p><p id="gavr" style="left:95px">Write a review today</p>'
+                );
+              }
+            } catch (e) {
+              document.write('<p id="gavd" style="">Write a review today!</p>');
+            }
+          </script>
+          <noscript> <p id="gavd" style="">Write a review today!</p> </noscript>
+        </div>
+      </a>
+    </div>
+    <!-- GolfAdvisor.com badge end -->
+
     <footer>
       <div id="footer-container" class="container">
         <div id="footer-contact-information">
@@ -122,5 +253,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/nav.js"></script>
   </body>
 </html>

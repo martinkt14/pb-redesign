@@ -38,6 +38,7 @@
     z-index: 1;
   }
   #hero-text {
+    margin-top: 6rem;
     z-index: 2;
     //Colors
     color: white;
@@ -74,7 +75,16 @@
       }
     }
     #scroll-arrows {
+      position: relative;
+      opacity: 0.6;
       margin-top: 4rem;
+      i {
+        animation: pulse 3s ease-in-out infinite;
+        position: absolute;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 }
@@ -96,6 +106,37 @@
     margin-bottom: 1.2rem;
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+  #secondary-cta {
+    width: 80%;
+    margin: 5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .secondary-cta-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      //Border for Hover Transition
+      border: 1px solid white;
+      padding: 2rem;
+      transition: 0.4s ease;
+      border-radius: 8px;
+      i {
+        color: $primary-yellow;
+        font-size: 3rem;
+      }
+      p {
+        @include mont-medium;
+        margin-top: 1rem;
+      }
+      &:hover {
+        border: 1px solid #ccc;
+        box-shadow: 0px 1px 10px #999;
+        transition: 0.4s ease;
+      }
     }
   }
 }
@@ -125,5 +166,21 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+  }
+}
+
+//Animations
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+    font-size: 1.5rem;
+  }
+  50% {
+    opacity: 1;
+    font-size: 2rem;
+  }
+  100% {
+    opacity: 0.2;
+    font-size: 1.5rem;
   }
 }
