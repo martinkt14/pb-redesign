@@ -55,8 +55,16 @@ footer {
       }
     }
     #footer-social-media {
-      p {
-        font-size: 0.9rem;
+      a {
+        color: $primary-yellow;
+        text-decoration: none;
+        margin-right: 0.5rem;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        i {
+          font-size: 1.4rem;
+        }
       }
     }
   }
